@@ -1,0 +1,54 @@
+\begin{table}
+\caption{Image-level AUROC (\%) on MVTec AD with k normal training images}
+\label{tab:fewshot}
+\begin{tabular}{lrrr}
+\toprule
+ & k = 1 & k = 4 & k = 16 \\
+method &  &  &  \\
+\midrule
+Ours (all modes) & 82.5 & 83.5 & 86.4 \\
+Ours (few-shot) & 80.3 & 82.3 & 85.6 \\
+PatchCore & 81.3 & 84.3 & 86.9 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}
+\caption{Ablation under lighting shift}
+\label{tab:ablation}
+\begin{tabular}{lrrr}
+\toprule
+ & Img. AUROC & Pix. AUROC & PRO \\
+config &  &  &  \\
+\midrule
+PatchCore & 73.9 & 84.1 & 52.4 \\
++ variance filter & 75.4 & 85.6 & 56.3 \\
++ Laplacian score & 64.0 & 81.6 & 47.4 \\
++ consistency graph & 74.1 & 89.2 & 62.6 \\
++ correlation filter & 74.3 & 89.3 & 62.8 \\
++ SPEC per level & 74.6 & 88.6 & 59.6 \\
++ adaptive fusion & 74.9 & 89.0 & 60.1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}
+\caption{Efficiency: channels, memory-bank size and inference time}
+\label{tab:efficiency}
+\begin{tabular}{lrrr}
+\toprule
+ & d & bank\_mb & ms\_per\_img \\
+config &  &  &  \\
+\midrule
+PatchCore & 1536.0 & 7.7 & 29.3 \\
++ variance filter & 1382.0 & 6.9 & 29.1 \\
++ Laplacian score & 307.0 & 1.5 & 28.1 \\
++ consistency graph & 307.0 & 1.5 & 26.5 \\
++ correlation filter & 307.0 & 1.5 & 28.1 \\
++ SPEC per level & 307.0 & 1.3 & 8.6 \\
++ adaptive fusion & 307.0 & 1.3 & 8.7 \\
+\bottomrule
+\end{tabular}
+\end{table}

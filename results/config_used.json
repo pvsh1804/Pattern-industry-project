@@ -1,0 +1,56 @@
+{
+  "dataset": "mvtec_ad",
+  "data_root": "/content/data",
+  "all_categories": [
+    "bottle",
+    "cable",
+    "capsule",
+    "carpet",
+    "grid",
+    "hazelnut",
+    "leather",
+    "metal_nut",
+    "pill",
+    "screw",
+    "tile",
+    "toothbrush",
+    "transistor",
+    "wood",
+    "zipper"
+  ],
+  "run_categories": [
+    "bottle",
+    "carpet",
+    "screw"
+  ],
+  "img_size": 256,
+  "crop": 224,
+  "backbone": "wide_resnet50_2",
+  "pretrained": true,
+  "var_quantile": 0.1,
+  "keep_frac": 0.2,
+  "n_graph": 2000,
+  "knn": 10,
+  "lam_pair": 1.0,
+  "corr_thresh": 0.9,
+  "temperature": 0.05,
+  "holdout_frac": 0.1,
+  "coreset_ratio": 0.1,
+  "min_bank": 1000,
+  "proj_dim": 128,
+  "smooth_sigma": 4,
+  "k_shots": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "ablation_k": 16,
+  "results_dir": "/content/results"
+}
