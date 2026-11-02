@@ -1,0 +1,6 @@
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+data/
+*.tar.xz
+kaggle.json
